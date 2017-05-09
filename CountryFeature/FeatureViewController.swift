@@ -22,7 +22,16 @@ class FeatureViewController: UITableViewController {
     }
     
     func HTTP() {
-        
+        let session = URLSession.shared
+        let url = URL(string: "https://restcountries.eu/rest/v2/all")!
+        let task = session.dataTask(with: url) { (data, _, _) -> Void in
+            if let data = data {
+                let string = String(data: data, encoding: String.Encoding.utf8)
+                print(string!) //JSONSerialization
+                
+            }
+        }
+        task.resume()
     }
     
 
