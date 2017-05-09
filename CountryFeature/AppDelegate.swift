@@ -12,10 +12,21 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "FeatureStoryboard", bundle: nil)
+        guard let vc = storyboard.instantiateInitialViewController() as? UINavigationController else {
+            fatalError("Failed to create a instance of UINavigationViewController")
+        }
+        self.window?.rootViewController = vc
+        return true
+    }
+    
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        self.window?.makeKeyAndVisible()
         return true
     }
 

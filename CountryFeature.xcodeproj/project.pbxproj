@@ -8,20 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		7E803FDE1EC236CE00CC5EA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E803FDD1EC236CE00CC5EA9 /* AppDelegate.swift */; };
-		7E803FE01EC236CE00CC5EA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E803FDF1EC236CE00CC5EA9 /* ViewController.swift */; };
-		7E803FE31EC236CE00CC5EA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E803FE11EC236CE00CC5EA9 /* Main.storyboard */; };
 		7E803FE51EC236CE00CC5EA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E803FE41EC236CE00CC5EA9 /* Assets.xcassets */; };
 		7E803FE81EC236CE00CC5EA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E803FE61EC236CE00CC5EA9 /* LaunchScreen.storyboard */; };
+		7E803FF01EC2376C00CC5EA9 /* FeatureStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E803FEF1EC2376C00CC5EA9 /* FeatureStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7E803FDA1EC236CE00CC5EA9 /* CountryFeature.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountryFeature.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E803FDD1EC236CE00CC5EA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7E803FDF1EC236CE00CC5EA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7E803FE21EC236CE00CC5EA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E803FE41EC236CE00CC5EA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E803FE71EC236CE00CC5EA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E803FE91EC236CE00CC5EA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E803FEF1EC2376C00CC5EA9 /* FeatureStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FeatureStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				7E803FDD1EC236CE00CC5EA9 /* AppDelegate.swift */,
-				7E803FDF1EC236CE00CC5EA9 /* ViewController.swift */,
-				7E803FE11EC236CE00CC5EA9 /* Main.storyboard */,
+				7E803FEF1EC2376C00CC5EA9 /* FeatureStoryboard.storyboard */,
 				7E803FE41EC236CE00CC5EA9 /* Assets.xcassets */,
 				7E803FE61EC236CE00CC5EA9 /* LaunchScreen.storyboard */,
 				7E803FE91EC236CE00CC5EA9 /* Info.plist */,
@@ -96,6 +93,7 @@
 				TargetAttributes = {
 					7E803FD91EC236CE00CC5EA9 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = QC44D63L54;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -125,7 +123,7 @@
 			files = (
 				7E803FE81EC236CE00CC5EA9 /* LaunchScreen.storyboard in Resources */,
 				7E803FE51EC236CE00CC5EA9 /* Assets.xcassets in Resources */,
-				7E803FE31EC236CE00CC5EA9 /* Main.storyboard in Resources */,
+				7E803FF01EC2376C00CC5EA9 /* FeatureStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +134,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E803FE01EC236CE00CC5EA9 /* ViewController.swift in Sources */,
 				7E803FDE1EC236CE00CC5EA9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,14 +141,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7E803FE11EC236CE00CC5EA9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7E803FE21EC236CE00CC5EA9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7E803FE61EC236CE00CC5EA9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -262,6 +251,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QC44D63L54;
 				INFOPLIST_FILE = CountryFeature/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lakistr8.CountryFeature;
@@ -274,6 +264,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QC44D63L54;
 				INFOPLIST_FILE = CountryFeature/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lakistr8.CountryFeature;
