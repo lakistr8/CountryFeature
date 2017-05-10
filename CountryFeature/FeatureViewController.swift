@@ -26,16 +26,26 @@ class FeatureViewController: UITableViewController {
     func HTTP() {
         let session = URLSession.shared
         let url = URL(string: "https://restcountries.eu/rest/v2/all")!
-        let task = session.dataTask(with: url) { (data, _, _) -> Void in
-            if let data = data {
-                let string = String(data: data, encoding: String.Encoding.utf8)
-                print(string!) //JSONSerialization
-                
+        let task = session.dataTask(with: url, completionHandler: { (data, response, error) in
+            if (error != nil) {
+                print(error.debugDescription)
+            }else{
+                do{
+                    self.dataSource = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [[String:AnyObject]]
+                    OperationQueue.main.addOperation {
+                        self.tableView.reloadData()
+                    }
+                } catch let error as NSError {
+                    print(error)
+                }
             }
-        }
+        })
+            
         task.resume()
     }
-    
+
+
+
 
     // MARK: - Table view data source
 
