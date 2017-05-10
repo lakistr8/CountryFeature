@@ -9,6 +9,8 @@
 import UIKit
 
 class FeatureViewController: UITableViewController {
+    
+    var dataSource = [[String:AnyObject]]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
