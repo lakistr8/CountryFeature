@@ -13,6 +13,7 @@
 		7E803FF01EC2376C00CC5EA9 /* FeatureStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E803FEF1EC2376C00CC5EA9 /* FeatureStoryboard.storyboard */; };
 		7E803FF21EC24BE600CC5EA9 /* FeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E803FF11EC24BE600CC5EA9 /* FeatureViewController.swift */; };
 		7E803FF41EC24C2A00CC5EA9 /* FeatureViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E803FF31EC24C2A00CC5EA9 /* FeatureViewCell.swift */; };
+		7EAF01ED1EC66C0D00AD112E /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAF01EC1EC66C0D00AD112E /* GridLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7E803FEF1EC2376C00CC5EA9 /* FeatureStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FeatureStoryboard.storyboard; sourceTree = "<group>"; };
 		7E803FF11EC24BE600CC5EA9 /* FeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureViewController.swift; sourceTree = "<group>"; };
 		7E803FF31EC24C2A00CC5EA9 /* FeatureViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureViewCell.swift; sourceTree = "<group>"; };
+		7EAF01EC1EC66C0D00AD112E /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				7E803FDD1EC236CE00CC5EA9 /* AppDelegate.swift */,
 				7E803FF11EC24BE600CC5EA9 /* FeatureViewController.swift */,
 				7E803FF31EC24C2A00CC5EA9 /* FeatureViewCell.swift */,
+				7EAF01EC1EC66C0D00AD112E /* GridLayout.swift */,
 				7E803FEF1EC2376C00CC5EA9 /* FeatureStoryboard.storyboard */,
 				7E803FE41EC236CE00CC5EA9 /* Assets.xcassets */,
 				7E803FE61EC236CE00CC5EA9 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 				7E803FDE1EC236CE00CC5EA9 /* AppDelegate.swift in Sources */,
 				7E803FF21EC24BE600CC5EA9 /* FeatureViewController.swift in Sources */,
 				7E803FF41EC24C2A00CC5EA9 /* FeatureViewCell.swift in Sources */,
+				7EAF01ED1EC66C0D00AD112E /* GridLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +304,7 @@
 				7E803FEE1EC236CE00CC5EA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
