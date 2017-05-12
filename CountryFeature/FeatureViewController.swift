@@ -8,9 +8,10 @@
 
 import UIKit
 
-class FeatureViewController: UITableViewController {
+class FeatureViewController: UIViewController {
     
     var dataSource = [[String:AnyObject]]()
+    @IBOutlet weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,7 @@ class FeatureViewController: UITableViewController {
                 do{
                     self.dataSource = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [[String:AnyObject]]
                     OperationQueue.main.addOperation {
-                        self.tableView.reloadData()
+                        self.collectionView.reloadData()
                     }
                 } catch let error as NSError {
                     print(error)
@@ -37,26 +38,32 @@ class FeatureViewController: UITableViewController {
             
         task.resume()
     }
+    
+}
 
-    // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+// MARK: - Collection view data source
+
+
+extension FeatureViewController : UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataSource.count
     }
-
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FeatureViewCell", for: indexPath)
-        let item = dataSource[indexPath.row]
-        cell.textLabel?.text = item["name"] as? String
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureViewCell", for: indexPath)
+        
         return cell
     }
+    
+    
 }
+
+
+

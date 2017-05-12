@@ -6,62 +6,91 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="esh-ff-45E">
-            <objects>
-                <tableViewController storyboardIdentifier="FeatureViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gQ5-b1-zE1" customClass="FeatureViewController" customModule="CountryFeature" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hWH-6W-44c">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeatureViewCell" textLabel="XoZ-Te-uvK" style="IBUITableViewCellStyleDefault" id="FbE-CZ-h0p" customClass="FeatureViewCell" customModule="CountryFeature" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FbE-CZ-h0p" id="HcG-rd-0z9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XoZ-Te-uvK">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="gQ5-b1-zE1" id="Csn-Wn-9BL"/>
-                            <outlet property="delegate" destination="gQ5-b1-zE1" id="hNK-Fh-XyB"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="trN-hI-aWf"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NLA-N2-xEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="439" y="215"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="IkK-qN-FGR">
             <objects>
                 <navigationController id="EQu-mW-WxP" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b7D-Ve-9oJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="b7D-Ve-9oJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="gQ5-b1-zE1" kind="relationship" relationship="rootViewController" id="mRa-bo-OT9"/>
+                        <segue destination="f6I-SG-L25" kind="relationship" relationship="rootViewController" id="Cq8-xh-4sK"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gjg-kv-Hdq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-512" y="215"/>
         </scene>
+        <!--Feature View Controller-->
+        <scene sceneID="dMw-ye-C3S">
+            <objects>
+                <viewController id="f6I-SG-L25" customClass="FeatureViewController" customModule="CountryFeature" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qRr-tB-PG7"/>
+                        <viewControllerLayoutGuide type="bottom" id="vt3-I4-BN0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K8e-gU-ryS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coast Town At Night iPhone 6 Plus HD Wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="cbd-7b-xMY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WIP-BF-lUL">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i6V-gd-F6g">
+                                    <size key="itemSize" width="238" height="221"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FeatureViewCell" id="jvJ-lK-4WU" customClass="FeatureViewCell" customModule="CountryFeature" customModuleProvider="target">
+                                        <rect key="frame" x="68.5" y="0.0" width="238" height="221"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="239" height="221"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="f6I-SG-L25" id="g6S-3n-taS"/>
+                                    <outlet property="delegate" destination="f6I-SG-L25" id="6XW-gI-zXj"/>
+                                    <outlet property="prefetchDataSource" destination="f6I-SG-L25" id="Oh4-wp-gmS"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cbd-7b-xMY" secondAttribute="trailing" id="EWg-H4-a7y"/>
+                            <constraint firstItem="cbd-7b-xMY" firstAttribute="top" secondItem="K8e-gU-ryS" secondAttribute="topMargin" id="Fp0-bA-Wij"/>
+                            <constraint firstAttribute="trailing" secondItem="WIP-BF-lUL" secondAttribute="trailing" id="G8R-Ig-9wZ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="WIP-BF-lUL" secondAttribute="bottom" id="Gz7-DL-6vN"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="cbd-7b-xMY" secondAttribute="bottom" id="RxI-Dm-dTN"/>
+                            <constraint firstItem="WIP-BF-lUL" firstAttribute="top" secondItem="qRr-tB-PG7" secondAttribute="bottom" id="W5v-Jq-vNW"/>
+                            <constraint firstItem="WIP-BF-lUL" firstAttribute="leading" secondItem="K8e-gU-ryS" secondAttribute="leading" id="c07-8M-fJJ"/>
+                            <constraint firstItem="cbd-7b-xMY" firstAttribute="leading" secondItem="K8e-gU-ryS" secondAttribute="leading" id="c3E-1V-no3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="24R-R5-qGo"/>
+                    <connections>
+                        <outlet property="collectionView" destination="WIP-BF-lUL" id="BPZ-g5-g7E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zqy-dh-hSX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279.19999999999999" y="220.83958020989508"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Coast Town At Night iPhone 6 Plus HD Wallpaper" width="500" height="800"/>
+    </resources>
 </document>
