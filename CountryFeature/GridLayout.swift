@@ -22,7 +22,7 @@ class GridLayout: UICollectionViewFlowLayout {
     
     func commonInit() {
         self.itemSize = CGSize(width: 365, height: 595)
-        self.minimumInteritemSpacing = 1
+        self.minimumInteritemSpacing = 10
         self.minimumLineSpacing = 1
         self.sectionInset = .zero
         self.scrollDirection = .horizontal
