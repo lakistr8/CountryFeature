@@ -14,7 +14,7 @@
         <scene sceneID="IkK-qN-FGR">
             <objects>
                 <navigationController id="EQu-mW-WxP" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="b7D-Ve-9oJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b7D-Ve-9oJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -61,7 +61,7 @@
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.14506635273972604" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="RqI-5I-hh4" firstAttribute="top" secondItem="jvJ-lK-4WU" secondAttribute="top" constant="20" id="j5D-1P-CdN"/>
                                             <constraint firstAttribute="trailing" secondItem="RqI-5I-hh4" secondAttribute="trailing" id="jxK-kP-WLW"/>
