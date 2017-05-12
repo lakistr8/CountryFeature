@@ -61,6 +61,7 @@ extension FeatureViewController : UICollectionViewDataSource {
         let item = dataSource[indexPath.row]
         
         cell.countryNameLabel?.text = item["name"] as? String
+        cell.flagImage.image = item["flag"] as? UIImage
         
         return cell
     }

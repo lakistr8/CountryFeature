@@ -47,10 +47,10 @@
                                 <collectionViewLayout key="collectionViewLayout" id="9lA-jV-gal" customClass="GridLayout" customModule="CountryFeature" customModuleProvider="target"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FeatureViewCell" id="jvJ-lK-4WU" customClass="FeatureViewCell" customModule="CountryFeature" customModuleProvider="target">
-                                        <rect key="frame" x="47" y="0.0" width="281" height="468"/>
+                                        <rect key="frame" x="47" y="0.0" width="281" height="547"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="281" height="468"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="281" height="547"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqI-5I-hh4">
@@ -59,17 +59,27 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NoW-04-7n4">
+                                                    <rect key="frame" x="100" y="54.5" width="81" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="S0M-sC-L2E"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.14506635273972604" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="NoW-04-7n4" firstAttribute="leading" secondItem="jvJ-lK-4WU" secondAttribute="leading" constant="100" id="REV-y8-eeu"/>
+                                            <constraint firstAttribute="trailing" secondItem="NoW-04-7n4" secondAttribute="trailing" constant="100" id="Ue8-Z6-zAZ"/>
+                                            <constraint firstItem="NoW-04-7n4" firstAttribute="top" secondItem="RqI-5I-hh4" secondAttribute="bottom" id="cOk-Wk-QQ7"/>
                                             <constraint firstItem="RqI-5I-hh4" firstAttribute="top" secondItem="jvJ-lK-4WU" secondAttribute="top" constant="20" id="j5D-1P-CdN"/>
                                             <constraint firstAttribute="trailing" secondItem="RqI-5I-hh4" secondAttribute="trailing" id="jxK-kP-WLW"/>
                                             <constraint firstItem="RqI-5I-hh4" firstAttribute="leading" secondItem="jvJ-lK-4WU" secondAttribute="leading" id="sLu-Gj-XCz"/>
                                         </constraints>
-                                        <size key="customSize" width="281" height="468"/>
+                                        <size key="customSize" width="281" height="547"/>
                                         <connections>
                                             <outlet property="countryNameLabel" destination="RqI-5I-hh4" id="xxh-Nb-RdE"/>
+                                            <outlet property="flagImage" destination="NoW-04-7n4" id="u4R-eO-CvY"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

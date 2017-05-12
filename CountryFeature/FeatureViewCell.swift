@@ -11,5 +11,5 @@ import UIKit
 class FeatureViewCell: UICollectionViewCell {
 
     @IBOutlet weak var countryNameLabel : UILabel!
-    
+    @IBOutlet weak var flagImage : UIImageView!
 }
