@@ -68,6 +68,9 @@
                                             <constraint firstItem="RqI-5I-hh4" firstAttribute="leading" secondItem="jvJ-lK-4WU" secondAttribute="leading" id="sLu-Gj-XCz"/>
                                         </constraints>
                                         <size key="customSize" width="281" height="468"/>
+                                        <connections>
+                                            <outlet property="countryNameLabel" destination="RqI-5I-hh4" id="xxh-Nb-RdE"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
