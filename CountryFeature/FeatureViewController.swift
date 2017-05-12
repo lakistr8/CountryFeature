@@ -82,7 +82,7 @@ extension FeatureViewController : UICollectionViewDelegateFlowLayout {
         itemTotalWidth -= (layout.sectionInset.left + layout.sectionInset.right)
         
         let itemWidth = itemTotalWidth / CGFloat(columns)
-        return CGSize(width: itemWidth, height: itemWidth)
+        return CGSize(width: itemWidth, height: self.collectionView.bounds.height)
     }
     
 }
