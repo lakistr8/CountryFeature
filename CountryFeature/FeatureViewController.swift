@@ -71,7 +71,7 @@ extension FeatureViewController : UICollectionViewDataSource {
         cell.regionLabel.text = item["region"] as? String
         cell.subRegionLabel.text = item["subregion"] as? String
         cell.isoCodeLabel.text = item["alpha3Code"] as? String
-        
+        cell.changeBorder()
         
         return cell
     }

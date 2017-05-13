@@ -66,22 +66,22 @@
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWk-2i-PPt">
-                                                    <rect key="frame" x="0.0" y="126" width="281" height="40"/>
+                                                    <rect key="frame" x="10" y="126" width="261" height="40"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital Town" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egb-Rm-4j0">
-                                                            <rect key="frame" x="0.0" y="0.0" width="281" height="23.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="261" height="23.5"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Town Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdH-WW-5Ai">
-                                                            <rect key="frame" x="0.0" y="19" width="281" height="21"/>
+                                                            <rect key="frame" x="0.0" y="19" width="261" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.1035691352739726" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="Egb-Rm-4j0" firstAttribute="leading" secondItem="iWk-2i-PPt" secondAttribute="leading" id="VxU-O4-Tqk"/>
                                                         <constraint firstAttribute="trailing" secondItem="xdH-WW-5Ai" secondAttribute="trailing" id="efi-CF-Hj3"/>
@@ -173,7 +173,7 @@
                                                             </constraints>
                                                         </view>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.99758090101522845" green="0.99758090101522845" blue="0.99758090101522845" alpha="0.19871040239726026" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="SgE-fp-qL2" firstAttribute="leading" secondItem="7T0-lI-MPJ" secondAttribute="leading" id="0rn-ez-YsC"/>
                                                         <constraint firstItem="SgE-fp-qL2" firstAttribute="top" secondItem="7T0-lI-MPJ" secondAttribute="top" id="9xb-GC-6bM"/>
@@ -187,13 +187,13 @@
                                                 </view>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.14506635273972604" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="7T0-lI-MPJ" firstAttribute="top" secondItem="iWk-2i-PPt" secondAttribute="bottom" constant="10" id="LoP-xk-Ozb"/>
                                             <constraint firstItem="NoW-04-7n4" firstAttribute="leading" secondItem="jvJ-lK-4WU" secondAttribute="leading" constant="100" id="REV-y8-eeu"/>
-                                            <constraint firstItem="iWk-2i-PPt" firstAttribute="leading" secondItem="jvJ-lK-4WU" secondAttribute="leading" id="Sul-mu-hyP"/>
+                                            <constraint firstItem="iWk-2i-PPt" firstAttribute="leading" secondItem="jvJ-lK-4WU" secondAttribute="leading" constant="10" id="Sul-mu-hyP"/>
                                             <constraint firstAttribute="trailing" secondItem="NoW-04-7n4" secondAttribute="trailing" constant="100" id="Ue8-Z6-zAZ"/>
-                                            <constraint firstAttribute="trailing" secondItem="iWk-2i-PPt" secondAttribute="trailing" id="aQU-rv-8d0"/>
+                                            <constraint firstAttribute="trailing" secondItem="iWk-2i-PPt" secondAttribute="trailing" constant="10" id="aQU-rv-8d0"/>
                                             <constraint firstItem="NoW-04-7n4" firstAttribute="top" secondItem="RqI-5I-hh4" secondAttribute="bottom" id="cOk-Wk-QQ7"/>
                                             <constraint firstItem="7T0-lI-MPJ" firstAttribute="leading" secondItem="jvJ-lK-4WU" secondAttribute="leading" id="eLi-BP-6fX"/>
                                             <constraint firstItem="iWk-2i-PPt" firstAttribute="top" secondItem="NoW-04-7n4" secondAttribute="bottom" constant="1" id="igf-fg-crF"/>
@@ -204,12 +204,14 @@
                                         </constraints>
                                         <size key="customSize" width="281" height="547"/>
                                         <connections>
+                                            <outlet property="countryFeatureView" destination="7T0-lI-MPJ" id="yEI-eN-sQ9"/>
                                             <outlet property="countryNameLabel" destination="RqI-5I-hh4" id="xxh-Nb-RdE"/>
                                             <outlet property="flagImage" destination="NoW-04-7n4" id="u4R-eO-CvY"/>
                                             <outlet property="isoCodeLabel" destination="8rm-BH-05R" id="NpV-yt-8uj"/>
                                             <outlet property="regionLabel" destination="N6l-5r-Oia" id="3ZM-gY-kLZ"/>
                                             <outlet property="subRegionLabel" destination="rry-Aj-aiB" id="8Ho-Rs-S0i"/>
                                             <outlet property="townName" destination="xdH-WW-5Ai" id="L0m-5V-ZCM"/>
+                                            <outlet property="townView" destination="iWk-2i-PPt" id="UWq-0n-XSY"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

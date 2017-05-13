@@ -17,6 +17,17 @@ class FeatureViewCell: UICollectionViewCell {
     @IBOutlet weak var regionLabel : UILabel!
     @IBOutlet weak var subRegionLabel : UILabel!
     @IBOutlet weak var isoCodeLabel : UILabel!
+    @IBOutlet weak var countryFeatureView : UIView!
+    @IBOutlet weak var townView : UIView!
+    
+    
+    func changeBorder() {
+        self.townView.layer.masksToBounds = true
+        self.townView.layer.cornerRadius  = CGFloat(roundf(Float(self.townView.frame.size.width/20.0)))
+        
+        self.countryFeatureView.layer.masksToBounds = true
+        self.countryFeatureView.layer.cornerRadius  = CGFloat(roundf(Float(self.countryFeatureView.frame.size.width/20.0)))
+    }
     
     func downloadImg(using string: String) {
         flagImage.image = nil
