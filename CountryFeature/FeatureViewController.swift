@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class FeatureViewController: UIViewController {
     
@@ -18,6 +19,7 @@ class FeatureViewController: UIViewController {
         self.HTTP()
     }
     
+    
     func HTTP() {
         let session = URLSession.shared
         let url = URL(string: "https://restcountries.eu/rest/v2/all")!
@@ -27,7 +29,7 @@ class FeatureViewController: UIViewController {
             }else{
                 do{
                     self.dataSource = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [[String:AnyObject]]
-                    OperationQueue.main.addOperation {
+                    DispatchQueue.main.async {
                         self.collectionView.reloadData()
                     }
                 } catch let error as NSError {
@@ -59,9 +61,11 @@ extension FeatureViewController : UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureViewCell", for: indexPath) as! FeatureViewCell
         let item = dataSource[indexPath.row]
+        let url = item["flag"] as? String
         
         cell.countryNameLabel?.text = item["name"] as? String
-        cell.flagImage.image = item["flag"] as? UIImage
+        cell.downloadImg(using: url!)
+        
         
         return cell
     }
