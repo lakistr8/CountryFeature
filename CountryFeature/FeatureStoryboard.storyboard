@@ -42,7 +42,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WIP-BF-lUL">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="94" width="375" height="573"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewLayout key="collectionViewLayout" id="9lA-jV-gal" customClass="GridLayout" customModule="CountryFeature" customModuleProvider="target"/>
                                 <cells>
@@ -185,17 +185,35 @@
                                                         <constraint firstItem="02B-Q4-p41" firstAttribute="top" secondItem="SgE-fp-qL2" secondAttribute="bottom" constant="1" id="vll-H5-vwR"/>
                                                     </constraints>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Native Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtn-sS-MrP">
+                                                    <rect key="frame" x="50" y="296" width="181" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6BY-1z-rDi">
+                                                    <rect key="frame" x="100" y="318" width="73" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="6BY-1z-rDi" firstAttribute="top" secondItem="Vtn-sS-MrP" secondAttribute="bottom" constant="1" id="7dT-NO-lfU"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="6BY-1z-rDi" secondAttribute="trailing" constant="100" id="Emd-lU-Zqd"/>
                                             <constraint firstItem="7T0-lI-MPJ" firstAttribute="top" secondItem="iWk-2i-PPt" secondAttribute="bottom" constant="10" id="LoP-xk-Ozb"/>
+                                            <constraint firstItem="Vtn-sS-MrP" firstAttribute="top" secondItem="02B-Q4-p41" secondAttribute="bottom" constant="20" id="QBC-hL-uAO"/>
                                             <constraint firstItem="NoW-04-7n4" firstAttribute="leading" secondItem="jvJ-lK-4WU" secondAttribute="leading" constant="100" id="REV-y8-eeu"/>
                                             <constraint firstItem="iWk-2i-PPt" firstAttribute="leading" secondItem="jvJ-lK-4WU" secondAttribute="leading" constant="10" id="Sul-mu-hyP"/>
                                             <constraint firstAttribute="trailing" secondItem="NoW-04-7n4" secondAttribute="trailing" constant="100" id="Ue8-Z6-zAZ"/>
+                                            <constraint firstItem="6BY-1z-rDi" firstAttribute="leading" secondItem="jvJ-lK-4WU" secondAttribute="leading" constant="100" id="VgR-Bx-aBr"/>
                                             <constraint firstAttribute="trailing" secondItem="iWk-2i-PPt" secondAttribute="trailing" constant="10" id="aQU-rv-8d0"/>
                                             <constraint firstItem="NoW-04-7n4" firstAttribute="top" secondItem="RqI-5I-hh4" secondAttribute="bottom" id="cOk-Wk-QQ7"/>
                                             <constraint firstItem="7T0-lI-MPJ" firstAttribute="leading" secondItem="jvJ-lK-4WU" secondAttribute="leading" id="eLi-BP-6fX"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vtn-sS-MrP" secondAttribute="trailing" constant="50" id="fTd-gq-CmX"/>
+                                            <constraint firstItem="Vtn-sS-MrP" firstAttribute="leading" secondItem="jvJ-lK-4WU" secondAttribute="leading" constant="50" id="hSd-uO-fS8"/>
                                             <constraint firstItem="iWk-2i-PPt" firstAttribute="top" secondItem="NoW-04-7n4" secondAttribute="bottom" constant="1" id="igf-fg-crF"/>
                                             <constraint firstItem="RqI-5I-hh4" firstAttribute="top" secondItem="jvJ-lK-4WU" secondAttribute="top" constant="20" id="j5D-1P-CdN"/>
                                             <constraint firstAttribute="trailing" secondItem="RqI-5I-hh4" secondAttribute="trailing" id="jxK-kP-WLW"/>
@@ -208,6 +226,7 @@
                                             <outlet property="countryNameLabel" destination="RqI-5I-hh4" id="xxh-Nb-RdE"/>
                                             <outlet property="flagImage" destination="NoW-04-7n4" id="u4R-eO-CvY"/>
                                             <outlet property="isoCodeLabel" destination="8rm-BH-05R" id="NpV-yt-8uj"/>
+                                            <outlet property="nativeNameLabel" destination="6BY-1z-rDi" id="kyX-VI-Rwd"/>
                                             <outlet property="regionLabel" destination="N6l-5r-Oia" id="3ZM-gY-kLZ"/>
                                             <outlet property="subRegionLabel" destination="rry-Aj-aiB" id="8Ho-Rs-S0i"/>
                                             <outlet property="townName" destination="xdH-WW-5Ai" id="L0m-5V-ZCM"/>
@@ -234,7 +253,7 @@
                             <constraint firstItem="cbd-7b-xMY" firstAttribute="leading" secondItem="K8e-gU-ryS" secondAttribute="leading" id="c3E-1V-no3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="24R-R5-qGo"/>
+                    <navigationItem key="navigationItem" prompt="Country-Features" id="24R-R5-qGo"/>
                     <connections>
                         <outlet property="collectionView" destination="WIP-BF-lUL" id="BPZ-g5-g7E"/>
                     </connections>

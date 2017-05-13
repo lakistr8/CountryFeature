@@ -19,6 +19,7 @@ class FeatureViewCell: UICollectionViewCell {
     @IBOutlet weak var isoCodeLabel : UILabel!
     @IBOutlet weak var countryFeatureView : UIView!
     @IBOutlet weak var townView : UIView!
+    @IBOutlet weak var nativeNameLabel : UILabel!
     
     
     func changeBorder() {
