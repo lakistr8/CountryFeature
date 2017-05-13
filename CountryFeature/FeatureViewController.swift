@@ -13,12 +13,15 @@ class FeatureViewController: UIViewController {
     
     var dataSource = [[String:AnyObject]]()
     @IBOutlet weak var collectionView: UICollectionView!
+    var searchString : String?
+    var searchController: UISearchController?
+    weak var featureCell : FeatureViewCell!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.HTTP()
+        self.setupSearch()
     }
-    
     
     func HTTP() {
         let session = URLSession.shared
@@ -40,7 +43,6 @@ class FeatureViewController: UIViewController {
             
         task.resume()
     }
-    
 }
 
 
@@ -95,6 +97,49 @@ extension FeatureViewController : UICollectionViewDelegateFlowLayout {
     }
     
 }
+
+
+// MARK: - Search bar
+extension FeatureViewController : UISearchResultsUpdating {
+    
+    func setupSearch() {
+        
+        searchController = {
+            let sc = UISearchController(searchResultsController: nil)
+            sc.searchResultsUpdater = self
+            //
+            sc.hidesNavigationBarDuringPresentation = false
+            sc.dimsBackgroundDuringPresentation = false
+            
+            //
+            sc.searchBar.searchBarStyle = UISearchBarStyle.prominent
+            self.navigationItem.titleView = sc.searchBar
+            sc.searchBar.sizeToFit()
+            
+            return sc
+        }()
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+        guard let cell = featureCell else {
+            return
+        }
+        self.searchString = cell.countryNameLabel.text
+        self.collectionView.reloadData()
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
 
 
 
