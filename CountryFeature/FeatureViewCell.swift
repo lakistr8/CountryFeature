@@ -13,7 +13,7 @@ class FeatureViewCell: UICollectionViewCell {
 
     @IBOutlet weak var countryNameLabel : UILabel!
     @IBOutlet weak var flagImage : UIImageView!
-    
+    @IBOutlet weak var townName : UILabel!
     
     func downloadImg(using string: String) {
         flagImage.image = nil

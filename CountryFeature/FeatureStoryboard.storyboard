@@ -65,13 +65,43 @@
                                                         <constraint firstAttribute="height" constant="70" id="S0M-sC-L2E"/>
                                                     </constraints>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWk-2i-PPt">
+                                                    <rect key="frame" x="0.0" y="126" width="281" height="100"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital Town" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egb-Rm-4j0">
+                                                            <rect key="frame" x="0.0" y="0.0" width="281" height="23.5"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Town Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdH-WW-5Ai">
+                                                            <rect key="frame" x="0.0" y="79" width="281" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Egb-Rm-4j0" firstAttribute="leading" secondItem="iWk-2i-PPt" secondAttribute="leading" id="VxU-O4-Tqk"/>
+                                                        <constraint firstAttribute="trailing" secondItem="xdH-WW-5Ai" secondAttribute="trailing" id="efi-CF-Hj3"/>
+                                                        <constraint firstItem="Egb-Rm-4j0" firstAttribute="top" secondItem="iWk-2i-PPt" secondAttribute="top" id="gUX-Yf-5es"/>
+                                                        <constraint firstAttribute="bottom" secondItem="xdH-WW-5Ai" secondAttribute="bottom" id="kMK-CR-nfm"/>
+                                                        <constraint firstItem="xdH-WW-5Ai" firstAttribute="leading" secondItem="iWk-2i-PPt" secondAttribute="leading" id="oht-Kt-Uei"/>
+                                                        <constraint firstAttribute="height" constant="100" id="qZx-QE-t0l"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Egb-Rm-4j0" secondAttribute="trailing" id="zp9-9E-fAZ"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.14506635273972604" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="NoW-04-7n4" firstAttribute="leading" secondItem="jvJ-lK-4WU" secondAttribute="leading" constant="100" id="REV-y8-eeu"/>
+                                            <constraint firstItem="iWk-2i-PPt" firstAttribute="leading" secondItem="jvJ-lK-4WU" secondAttribute="leading" id="Sul-mu-hyP"/>
                                             <constraint firstAttribute="trailing" secondItem="NoW-04-7n4" secondAttribute="trailing" constant="100" id="Ue8-Z6-zAZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="iWk-2i-PPt" secondAttribute="trailing" id="aQU-rv-8d0"/>
                                             <constraint firstItem="NoW-04-7n4" firstAttribute="top" secondItem="RqI-5I-hh4" secondAttribute="bottom" id="cOk-Wk-QQ7"/>
+                                            <constraint firstItem="iWk-2i-PPt" firstAttribute="top" secondItem="NoW-04-7n4" secondAttribute="bottom" constant="1" id="igf-fg-crF"/>
                                             <constraint firstItem="RqI-5I-hh4" firstAttribute="top" secondItem="jvJ-lK-4WU" secondAttribute="top" constant="20" id="j5D-1P-CdN"/>
                                             <constraint firstAttribute="trailing" secondItem="RqI-5I-hh4" secondAttribute="trailing" id="jxK-kP-WLW"/>
                                             <constraint firstItem="RqI-5I-hh4" firstAttribute="leading" secondItem="jvJ-lK-4WU" secondAttribute="leading" id="sLu-Gj-XCz"/>
@@ -80,6 +110,7 @@
                                         <connections>
                                             <outlet property="countryNameLabel" destination="RqI-5I-hh4" id="xxh-Nb-RdE"/>
                                             <outlet property="flagImage" destination="NoW-04-7n4" id="u4R-eO-CvY"/>
+                                            <outlet property="townName" destination="xdH-WW-5Ai" id="L0m-5V-ZCM"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

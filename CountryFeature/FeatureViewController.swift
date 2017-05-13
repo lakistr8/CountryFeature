@@ -65,6 +65,7 @@ extension FeatureViewController : UICollectionViewDataSource {
         
         cell.countryNameLabel?.text = item["name"] as? String
         cell.downloadImg(using: url!)
+        cell.townName.text = item["capital"] as? String
         
         
         return cell
