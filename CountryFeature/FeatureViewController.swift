@@ -61,11 +61,14 @@ extension FeatureViewController : UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureViewCell", for: indexPath) as! FeatureViewCell
         let item = dataSource[indexPath.row]
-        let url = item["flag"] as? String
+//        let url = item["flag"] as? String
         
         cell.countryNameLabel?.text = item["name"] as? String
-        cell.downloadImg(using: url!)
+//        cell.downloadImg(using: url!)
         cell.townName.text = item["capital"] as? String
+        cell.regionLabel.text = item["region"] as? String
+        cell.subRegionLabel.text = item["subregion"] as? String
+        cell.timeZoneLabel.text = item["timezones"] as? String
         
         
         return cell
