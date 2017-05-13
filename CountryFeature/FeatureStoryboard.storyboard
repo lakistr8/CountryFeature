@@ -104,7 +104,7 @@
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time-Zone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDz-VZ-b5y">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISO Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDz-VZ-b5y">
                                                                     <rect key="frame" x="187" y="0.0" width="93" height="40"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -137,7 +137,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="02B-Q4-p41">
                                                             <rect key="frame" x="0.0" y="41" width="281" height="59"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6l-5r-Oia">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6l-5r-Oia">
                                                                     <rect key="frame" x="1" y="1" width="92.5" height="57"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -206,9 +206,9 @@
                                         <connections>
                                             <outlet property="countryNameLabel" destination="RqI-5I-hh4" id="xxh-Nb-RdE"/>
                                             <outlet property="flagImage" destination="NoW-04-7n4" id="u4R-eO-CvY"/>
+                                            <outlet property="isoCodeLabel" destination="8rm-BH-05R" id="NpV-yt-8uj"/>
                                             <outlet property="regionLabel" destination="N6l-5r-Oia" id="3ZM-gY-kLZ"/>
                                             <outlet property="subRegionLabel" destination="rry-Aj-aiB" id="8Ho-Rs-S0i"/>
-                                            <outlet property="timeZoneLabel" destination="8rm-BH-05R" id="T5p-O9-8kQ"/>
                                             <outlet property="townName" destination="xdH-WW-5Ai" id="L0m-5V-ZCM"/>
                                         </connections>
                                     </collectionViewCell>

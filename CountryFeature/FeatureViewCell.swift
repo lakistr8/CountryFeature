@@ -16,7 +16,7 @@ class FeatureViewCell: UICollectionViewCell {
     @IBOutlet weak var townName : UILabel!
     @IBOutlet weak var regionLabel : UILabel!
     @IBOutlet weak var subRegionLabel : UILabel!
-    @IBOutlet weak var timeZoneLabel : UILabel!
+    @IBOutlet weak var isoCodeLabel : UILabel!
     
     func downloadImg(using string: String) {
         flagImage.image = nil

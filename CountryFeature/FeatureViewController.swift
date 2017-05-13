@@ -70,7 +70,7 @@ extension FeatureViewController : UICollectionViewDataSource {
         cell.townName.text = item["capital"] as? String
         cell.regionLabel.text = item["region"] as? String
         cell.subRegionLabel.text = item["subregion"] as? String
-        cell.timeZoneLabel.text = item["timezones"] as? String
+        cell.isoCodeLabel.text = item["alpha3Code"] as? String
         
         
         return cell
@@ -122,11 +122,9 @@ extension FeatureViewController : UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
         
-        guard let cell = featureCell else {
-            return
-        }
-        self.searchString = cell.countryNameLabel.text
+        self.searchString = searchController.searchBar.text
         self.collectionView.reloadData()
+        
     }
     
     
