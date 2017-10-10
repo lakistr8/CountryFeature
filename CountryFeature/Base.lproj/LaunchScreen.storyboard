@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,12 +26,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country - Features" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HbB-Dy-3Mw">
-                                <rect key="frame" x="99" y="20" width="176" height="22"/>
+                                <rect key="frame" x="99" y="100" width="176" height="22"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright 2017 lakistr8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j68-bN-Rsc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ⓒ Copyright 2017 lakistr8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j68-bN-Rsc">
                                 <rect key="frame" x="0.0" y="612" width="375" height="40"/>
                                 <fontDescription key="fontDescription" name="KhmerSangamMN" family="Khmer Sangam MN" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,7 +43,7 @@
                             <constraint firstAttribute="trailing" secondItem="j68-bN-Rsc" secondAttribute="trailing" id="34E-KY-m2f"/>
                             <constraint firstItem="j68-bN-Rsc" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="TOF-4K-yk9"/>
                             <constraint firstItem="XIK-KN-esk" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="TQf-9S-iGV"/>
-                            <constraint firstItem="HbB-Dy-3Mw" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="cNL-za-rCM"/>
+                            <constraint firstItem="HbB-Dy-3Mw" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="80" id="cNL-za-rCM"/>
                             <constraint firstAttribute="bottomMargin" secondItem="XIK-KN-esk" secondAttribute="bottom" id="dFl-Us-E75"/>
                             <constraint firstAttribute="trailing" secondItem="HbB-Dy-3Mw" secondAttribute="trailing" constant="100" id="gr6-ts-j1Q"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="j68-bN-Rsc" secondAttribute="bottom" constant="15" id="oaT-ZH-TKT"/>

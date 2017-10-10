@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import Kingfisher
+import Kingfisher
 
 class FeatureViewCell: UICollectionViewCell {
 
@@ -20,6 +20,7 @@ class FeatureViewCell: UICollectionViewCell {
     @IBOutlet weak var countryFeatureView : UIView!
     @IBOutlet weak var townView : UIView!
     @IBOutlet weak var nativeNameLabel : UILabel!
+    var imgLink : String?
     
     
     func changeBorder() {
@@ -30,17 +31,44 @@ class FeatureViewCell: UICollectionViewCell {
         self.countryFeatureView.layer.cornerRadius  = CGFloat(roundf(Float(self.countryFeatureView.frame.size.width/20.0)))
     }
     
-    func downloadImg(using string: String) {
-        flagImage.image = nil
-        guard
-            let url = URL(string: string)
-            else {
-                return
+    func bcgImagefrom(url: URL, image: UIImageView) {
+        image.contentMode = .scaleToFill
+        downloadImage(url: url, image: image)
+    }
+    
+    func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
+        URLSession.shared.dataTask(with: url) {
+            (data, response, error) in
+            completion(data, response, error)
+            }.resume()
+    }
+    
+    
+    func downloadImage(url: URL, image: UIImageView) {
+        getDataFromUrl(url: url) { (data, response, error) in
+            guard let data = data, error == nil else { return }
+            DispatchQueue.main.async() {
+                () -> Void in
+                image.image = UIImage(data: data)
+            }
+        }
+    }
+    
+    func initilaze(with data: [FeatureCellData]) {
+        
+        for item in data {
+            self.countryNameLabel.text = item.name
+            self.townName.text = item.townName
+            self.regionLabel.text = item.region
+            self.subRegionLabel.text = item.subRegion
+            self.isoCodeLabel.text = item.iso
+            self.nativeNameLabel.text = item.nativeName
+            let url = URL(string: item.imgLing)!
+            bcgImagefrom(url: url, image: self.flagImage)
         }
         
-        flagImage.kf.setImage(with: url)
-
     }
     
 }
+
 

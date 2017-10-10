@@ -7,41 +7,37 @@
 //
 
 import UIKit
-//import Kingfisher
+import SwiftyJSON
+import Alamofire
+
 
 class FeatureViewController: UIViewController {
     
-    var dataSource = [[String:AnyObject]]()
+    var dataSource : [FeatureCellData] = []
     @IBOutlet weak var collectionView: UICollectionView!
     var searchString : String?
     var searchController: UISearchController?
     weak var featureCell : FeatureViewCell!
+    let url = URL(string: "https://restcountries.eu/rest/v2/all")!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.HTTP()
+        self.HTTP(using: url)
         self.setupSearch()
     }
     
-    func HTTP() {
-        let session = URLSession.shared
-        let url = URL(string: "https://restcountries.eu/rest/v2/all")!
-        let task = session.dataTask(with: url, completionHandler: { (data, response, error) in
-            if (error != nil) {
-                print(error.debugDescription)
-            }else{
-                do{
-                    self.dataSource = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [[String:AnyObject]]
-                    DispatchQueue.main.async {
-                        self.collectionView.reloadData()
-                    }
-                } catch let error as NSError {
-                    print(error)
+    func HTTP(using string: URL) {
+        Alamofire.request(string).responseJSON { response in
+            if let json = response.result.value {
+                let jSON = JSON(json).array
+                for item in jSON! {
+                    self.dataSource.append(FeatureCellData(data: item))
                 }
+                print("\(jSON)")
+                self.collectionView.reloadData()
             }
-        })
-            
-        task.resume()
+        }
+        
     }
 }
 
@@ -62,18 +58,7 @@ extension FeatureViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureViewCell", for: indexPath) as! FeatureViewCell
-        let item = dataSource[indexPath.row]
-//        let url = item["flag"] as? String
-        
-        cell.countryNameLabel?.text = item["name"] as? String
-//        cell.downloadImg(using: url!)
-        cell.townName.text = item["capital"] as? String
-        cell.regionLabel.text = item["region"] as? String
-        cell.subRegionLabel.text = item["subregion"] as? String
-        cell.isoCodeLabel.text = item["alpha3Code"] as? String
-        cell.nativeNameLabel.text = item["nativeName"] as? String
-        cell.changeBorder()
-        
+        cell.initilaze(with: [dataSource[indexPath.row]])
         return cell
     }
 }

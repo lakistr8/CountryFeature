@@ -14,6 +14,7 @@
 		7E803FF21EC24BE600CC5EA9 /* FeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E803FF11EC24BE600CC5EA9 /* FeatureViewController.swift */; };
 		7E803FF41EC24C2A00CC5EA9 /* FeatureViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E803FF31EC24C2A00CC5EA9 /* FeatureViewCell.swift */; };
 		7EAF01ED1EC66C0D00AD112E /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAF01EC1EC66C0D00AD112E /* GridLayout.swift */; };
+		8CE494DC1F8CE54B0048385F /* FeatureCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE494DB1F8CE54B0048385F /* FeatureCellData.swift */; };
 		EE2C5BFE2532B838E6FF3D20 /* Pods_CountryFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3916687C819E170BC09319BC /* Pods_CountryFeature.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		7E803FF31EC24C2A00CC5EA9 /* FeatureViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureViewCell.swift; sourceTree = "<group>"; };
 		7EAF01EC1EC66C0D00AD112E /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		82391FD0E09DA73CFAAA8374 /* Pods-CountryFeature.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountryFeature.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CountryFeature/Pods-CountryFeature.debug.xcconfig"; sourceTree = "<group>"; };
+		8CE494DB1F8CE54B0048385F /* FeatureCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCellData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			children = (
 				7E803FDD1EC236CE00CC5EA9 /* AppDelegate.swift */,
 				7E803FF11EC24BE600CC5EA9 /* FeatureViewController.swift */,
+				8CE494DB1F8CE54B0048385F /* FeatureCellData.swift */,
 				7E803FF31EC24C2A00CC5EA9 /* FeatureViewCell.swift */,
 				7EAF01EC1EC66C0D00AD112E /* GridLayout.swift */,
 				7E803FEF1EC2376C00CC5EA9 /* FeatureStoryboard.storyboard */,
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E803FDE1EC236CE00CC5EA9 /* AppDelegate.swift in Sources */,
+				8CE494DC1F8CE54B0048385F /* FeatureCellData.swift in Sources */,
 				7E803FF21EC24BE600CC5EA9 /* FeatureViewController.swift in Sources */,
 				7E803FF41EC24C2A00CC5EA9 /* FeatureViewCell.swift in Sources */,
 				7EAF01ED1EC66C0D00AD112E /* GridLayout.swift in Sources */,
