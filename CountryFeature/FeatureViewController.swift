@@ -23,7 +23,6 @@ class FeatureViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.HTTP(using: url)
-        self.setupSearch()
     }
     
     func HTTP(using string: URL) {
@@ -33,7 +32,7 @@ class FeatureViewController: UIViewController {
                 for item in jSON! {
                     self.dataSource.append(FeatureCellData(data: item))
                 }
-                print("\(jSON)")
+//                print("\(jSON)")
                 self.collectionView.reloadData()
             }
         }
@@ -115,15 +114,3 @@ extension FeatureViewController : UISearchResultsUpdating {
     
     
 }
-
-
-
-
-
-
-
-
-
-
-
-

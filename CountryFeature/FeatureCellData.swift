@@ -17,7 +17,8 @@ struct FeatureCellData {
     var subRegion: String
     var iso: String
     var nativeName: String
-    var imgLing: String
+    var population: Int
+    var latlng : (lat: Double, long: Double)
     
     
     init(data: JSON) {
@@ -27,6 +28,12 @@ struct FeatureCellData {
         subRegion = data["subregion"].string!
         iso = data["alpha3Code"].string!
         nativeName = data["nativeName"].string!
-        imgLing = data["flag"].string!
+        population = data["population"].int!
+        if (data["latlng"][0].double != nil && data["latlng"][1].double != nil) {
+            latlng = (data["latlng"][0].double!, data["latlng"][1].double!)
+        } else {
+            latlng = (0, 0)
+        }
+        
     }
 }

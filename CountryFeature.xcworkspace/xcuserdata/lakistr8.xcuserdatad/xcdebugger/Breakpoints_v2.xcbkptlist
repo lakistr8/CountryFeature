@@ -6,79 +6,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CountryFeature/FeatureViewCell.swift"
-            timestampString = "529328480.063944"
+            filePath = "CountryFeature/FeatureCellData.swift"
+            timestampString = "530007925.345115"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "FeatureViewCell"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CountryFeature.FeatureViewCell.townName.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
-                  moduleName = "CountryFeature"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lakistr8/CountryFeature/CountryFeature/FeatureViewCell.swift"
-                  timestampString = "527708795.623698"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "78">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CountryFeature.FeatureViewCell.townName.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
-                  moduleName = "CountryFeature"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lakistr8/CountryFeature/CountryFeature/FeatureViewCell.swift"
-                  timestampString = "527708795.626098"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "86">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CountryFeature.FeatureViewCell.init(frame: __C.CGRect) -&gt; CountryFeature.FeatureViewCell"
-                  moduleName = "CountryFeature"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lakistr8/CountryFeature/CountryFeature/FeatureViewCell.swift"
-                  timestampString = "527708795.628653"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "358">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CountryFeature.FeatureViewCell.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;CountryFeature.FeatureViewCell&gt;"
-                  moduleName = "CountryFeature"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lakistr8/CountryFeature/CountryFeature/FeatureViewCell.swift"
-                  timestampString = "527708795.631743"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "276">
-               </Location>
-            </Locations>
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "init(data:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -88,73 +26,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CountryFeature/FeatureViewCell.swift"
-            timestampString = "529328480.064028"
+            timestampString = "530007925.346468"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "FeatureViewCell"
-            landmarkType = "3">
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "layoutSubviews()"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "CountryFeature.FeatureViewCell.flagImage.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
+                  symbolName = "CountryFeature.FeatureViewCell.locationManager(__ObjC.CLLocationManager, didUpdateLocations: Swift.Array&lt;__ObjC.CLLocation&gt;) -&gt; ()"
                   moduleName = "CountryFeature"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lakistr8/CountryFeature/CountryFeature/FeatureViewCell.swift"
-                  timestampString = "527708795.644134"
+                  timestampString = "529939284.712038"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "78">
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "139">
                </Location>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "CountryFeature.FeatureViewCell.flagImage.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
+                  symbolName = "CountryFeature.FeatureViewCell.locationManager(__ObjC.CLLocationManager, didUpdateLocations: Swift.Array&lt;__ObjC.CLLocation&gt;) -&gt; ()"
                   moduleName = "CountryFeature"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lakistr8/CountryFeature/CountryFeature/FeatureViewCell.swift"
-                  timestampString = "527708795.648065"
+                  timestampString = "529939284.71662"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "86">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CountryFeature.FeatureViewCell.init(frame: __C.CGRect) -&gt; CountryFeature.FeatureViewCell"
-                  moduleName = "CountryFeature"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lakistr8/CountryFeature/CountryFeature/FeatureViewCell.swift"
-                  timestampString = "527708795.651918"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "230">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CountryFeature.FeatureViewCell.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;CountryFeature.FeatureViewCell&gt;"
-                  moduleName = "CountryFeature"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lakistr8/CountryFeature/CountryFeature/FeatureViewCell.swift"
-                  timestampString = "527708795.65616"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "167">
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "781">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -162,79 +70,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CountryFeature/FeatureViewCell.swift"
-            timestampString = "529328480.064098"
+            timestampString = "530007925.34662"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "FeatureViewCell"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CountryFeature.FeatureViewCell.regionLabel.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
-                  moduleName = "CountryFeature"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lakistr8/CountryFeature/CountryFeature/FeatureViewCell.swift"
-                  timestampString = "527708795.666761"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "78">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CountryFeature.FeatureViewCell.regionLabel.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
-                  moduleName = "CountryFeature"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lakistr8/CountryFeature/CountryFeature/FeatureViewCell.swift"
-                  timestampString = "527708795.669974"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "86">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CountryFeature.FeatureViewCell.init(frame: __C.CGRect) -&gt; CountryFeature.FeatureViewCell"
-                  moduleName = "CountryFeature"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lakistr8/CountryFeature/CountryFeature/FeatureViewCell.swift"
-                  timestampString = "527708795.673213"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "495">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CountryFeature.FeatureViewCell.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;CountryFeature.FeatureViewCell&gt;"
-                  moduleName = "CountryFeature"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lakistr8/CountryFeature/CountryFeature/FeatureViewCell.swift"
-                  timestampString = "527708795.67619"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "388">
-               </Location>
-            </Locations>
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "initilaze(with:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

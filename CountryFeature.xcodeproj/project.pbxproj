@@ -133,6 +133,7 @@
 					7E803FD91EC236CE00CC5EA9 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = QC44D63L54;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -343,11 +344,14 @@
 			baseConfigurationReference = 82391FD0E09DA73CFAAA8374 /* Pods-CountryFeature.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = QC44D63L54;
 				INFOPLIST_FILE = CountryFeature/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lakistr8.CountryFeature;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -357,8 +361,10 @@
 			baseConfigurationReference = 0E1A07BF1360B528C3521D86 /* Pods-CountryFeature.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = QC44D63L54;
 				INFOPLIST_FILE = CountryFeature/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lakistr8.CountryFeature;
 				PRODUCT_NAME = "$(TARGET_NAME)";
