@@ -31,7 +31,7 @@ class FeatureViewCell: UICollectionViewCell, CLLocationManagerDelegate, MKMapVie
     @IBOutlet weak var nativeNameLabel : UILabel!
     @IBOutlet weak var populationLabel : UILabel!
     @IBOutlet weak var map: MKMapView!
-    var coordinates: (Double, Double) = (1,1)
+    var coordinates: [Double] = []
     var locationManager = CLLocationManager()
     
     func changeBorder() {
@@ -74,7 +74,7 @@ class FeatureViewCell: UICollectionViewCell, CLLocationManagerDelegate, MKMapVie
         
         
         
-        let center = CLLocationCoordinate2D(latitude: coordinates.0, longitude: coordinates.1)
+        let center = CLLocationCoordinate2D(latitude: coordinates.first!, longitude: coordinates.last!)
         var region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10))
         region.center = center
         map.setRegion(region, animated: true)

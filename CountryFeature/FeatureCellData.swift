@@ -18,7 +18,7 @@ struct FeatureCellData {
     var iso: String
     var nativeName: String
     var population: Int
-    var latlng : (lat: Double, long: Double)
+    var latlng : [Double] = []
     
     
     init(data: JSON) {
@@ -29,11 +29,7 @@ struct FeatureCellData {
         iso = data["alpha3Code"].string!
         nativeName = data["nativeName"].string!
         population = data["population"].int!
-        if (data["latlng"][0].double != nil && data["latlng"][1].double != nil) {
-            latlng = (data["latlng"][0].double!, data["latlng"][1].double!)
-        } else {
-            latlng = (0, 0)
-        }
+        latlng = data["latlng"].arrayValue.map({$0.doubleValue})
         
     }
 }
