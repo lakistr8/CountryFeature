@@ -23,6 +23,8 @@ class FeatureViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.HTTP(using: url)
+        setupSearch()
+        
     }
     
     func HTTP(using string: URL) {
@@ -31,6 +33,7 @@ class FeatureViewController: UIViewController {
                 let jSON = JSON(json).array
                 for item in jSON! {
                     self.dataSource.append(FeatureCellData(data: item))
+                    self.searchString = item["name"].string!
                 }
 //                print("\(jSON)")
                 self.collectionView.reloadData()
@@ -107,10 +110,15 @@ extension FeatureViewController : UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
         
-        self.searchString = searchController.searchBar.text
-        self.collectionView.reloadData()
-        
+        let enterName = searchController.searchBar.text
+        for (index, item) in dataSource.enumerated() {
+            if item.name == enterName {
+                print("nasli")
+                let scrollToIndexTo = IndexPath(item: index, section: 0)
+                self.collectionView.scrollToItem(at: scrollToIndexTo, at: .left, animated: true)
+                self.collectionView.reloadData()
+            }
+        }
     }
-    
     
 }

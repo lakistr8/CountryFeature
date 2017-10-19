@@ -12,15 +12,8 @@ import SwiftyJSON
 
 class FeatureViewCell: UICollectionViewCell, CLLocationManagerDelegate, MKMapViewDelegate {
     
-    @IBOutlet weak var lbl1 : UILabel!
-    @IBOutlet weak var lbl2 : UILabel!
-    @IBOutlet weak var lbl3 : UILabel!
-    @IBOutlet weak var lbl4 : UILabel!
-    @IBOutlet weak var lbl5 : UILabel!
-    @IBOutlet weak var lbl6 : UILabel!
+    @IBOutlet var lbls : [UILabel]!
     
-    
-
     @IBOutlet weak var countryNameLabel : UILabel!
     @IBOutlet weak var townName : UILabel!
     @IBOutlet weak var regionLabel : UILabel!
@@ -99,19 +92,10 @@ class FeatureViewCell: UICollectionViewCell, CLLocationManagerDelegate, MKMapVie
     
     func circleViews() {
         
-        lbl1.layer.masksToBounds = true
-        lbl1.layer.cornerRadius = CGFloat(roundf(Float(5)))
-        lbl2.layer.masksToBounds = true
-        lbl2.layer.cornerRadius = CGFloat(roundf(Float(5)))
-        lbl3.layer.masksToBounds = true
-        lbl3.layer.cornerRadius = CGFloat(roundf(Float(5)))
-        lbl4.layer.masksToBounds = true
-        lbl4.layer.cornerRadius = CGFloat(roundf(Float(5)))
-        lbl5.layer.masksToBounds = true
-        lbl5.layer.cornerRadius = CGFloat(roundf(Float(5)))
-        lbl6.layer.masksToBounds = true
-        lbl6.layer.cornerRadius = CGFloat(roundf(Float(5)))
-        
+        for item in lbls {
+            item.layer.masksToBounds = true
+            item.layer.cornerRadius = CGFloat(roundf(Float(5)))
+        }
         
         countryNameLabel.layer.masksToBounds = true
         countryNameLabel.layer.cornerRadius = CGFloat(roundf(Float(5)))
