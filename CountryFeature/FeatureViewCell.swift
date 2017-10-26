@@ -25,6 +25,9 @@ class FeatureViewCell: UICollectionViewCell, CLLocationManagerDelegate, MKMapVie
     @IBOutlet weak var populationLabel : UILabel!
     @IBOutlet weak var map: MKMapView!
     var coordinates: [Double] = []
+    var translations: [String] = []
+    var borders: [String] = []
+    var languages: [Any] = []
     var locationManager = CLLocationManager()
     
     func changeBorder() {
@@ -65,8 +68,6 @@ class FeatureViewCell: UICollectionViewCell, CLLocationManagerDelegate, MKMapVie
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        
-        
         let center = CLLocationCoordinate2D(latitude: coordinates.first!, longitude: coordinates.last!)
         var region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10))
         region.center = center
@@ -85,32 +86,18 @@ class FeatureViewCell: UICollectionViewCell, CLLocationManagerDelegate, MKMapVie
             self.nativeNameLabel.text = item.nativeName
             self.populationLabel.text = "\(item.population)"
             self.coordinates = item.latlng
-            
+            self.translations = item.translations
+            self.borders = item.borders
+            self.languages = item.languages
         }
         
     }
     
-    func circleViews() {
-        
+    func circleViews(){
         for item in lbls {
             item.layer.masksToBounds = true
             item.layer.cornerRadius = CGFloat(roundf(Float(5)))
         }
-        
-        countryNameLabel.layer.masksToBounds = true
-        countryNameLabel.layer.cornerRadius = CGFloat(roundf(Float(5)))
-        townName.layer.masksToBounds = true
-        townName.layer.cornerRadius = CGFloat(roundf(Float(5)))
-        regionLabel.layer.masksToBounds = true
-        regionLabel.layer.cornerRadius = CGFloat(roundf(Float(5)))
-        subRegionLabel.layer.masksToBounds = true
-        subRegionLabel.layer.cornerRadius = CGFloat(roundf(Float(5)))
-        isoCodeLabel.layer.masksToBounds = true
-        isoCodeLabel.layer.cornerRadius = CGFloat(roundf(Float(5)))
-        nativeNameLabel.layer.masksToBounds = true
-        nativeNameLabel.layer.cornerRadius = CGFloat(roundf(Float(5)))
-        populationLabel.layer.masksToBounds = true
-        populationLabel.layer.cornerRadius = CGFloat(roundf(Float(5)))
         map.layer.masksToBounds = true
         map.layer.cornerRadius = CGFloat(roundf(Float(5)))
     }

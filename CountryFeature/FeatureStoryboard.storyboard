@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -52,7 +52,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WIP-BF-lUL">
                                 <rect key="frame" x="0.0" y="98" width="375" height="569"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <collectionViewLayout key="collectionViewLayout" id="9lA-jV-gal" customClass="GridLayout" customModule="CountryFeature" customModuleProvider="target"/>
+                                <collectionViewLayout key="collectionViewLayout" id="Yqr-kx-60a" customClass="GridLayout" customModule="CountryFeature" customModuleProvider="target"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FeatureViewCell" id="jvJ-lK-4WU" customClass="FeatureViewCell" customModule="CountryFeature" customModuleProvider="target">
                                         <rect key="frame" x="47" y="0.0" width="281" height="547"/>
@@ -301,6 +301,12 @@
                                             <outletCollection property="lbls" destination="EDz-VZ-b5y" collectionClass="NSMutableArray" id="6mz-Ct-pkL"/>
                                             <outletCollection property="lbls" destination="Vtn-sS-MrP" collectionClass="NSMutableArray" id="Kry-7P-fDC"/>
                                             <outletCollection property="lbls" destination="8eY-zC-0PG" collectionClass="NSMutableArray" id="vwH-Ta-rzO"/>
+                                            <outletCollection property="lbls" destination="xdH-WW-5Ai" collectionClass="NSMutableArray" id="mme-Fi-8sB"/>
+                                            <outletCollection property="lbls" destination="N6l-5r-Oia" collectionClass="NSMutableArray" id="4MS-n7-x2h"/>
+                                            <outletCollection property="lbls" destination="rry-Aj-aiB" collectionClass="NSMutableArray" id="K9F-o6-EmO"/>
+                                            <outletCollection property="lbls" destination="8rm-BH-05R" collectionClass="NSMutableArray" id="RfQ-4c-Vrv"/>
+                                            <outletCollection property="lbls" destination="6BY-1z-rDi" collectionClass="NSMutableArray" id="TdE-LF-1qn"/>
+                                            <outletCollection property="lbls" destination="AuV-ga-lnc" collectionClass="NSMutableArray" id="fkV-1t-ewS"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
