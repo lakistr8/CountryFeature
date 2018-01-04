@@ -22,6 +22,7 @@ struct FeatureCellData {
     var translations : [String] = []
     var borders : [String] = []
     var languages : [Any] = []
+    var currencies : [Any] = []
     
     
     init(data: JSON) {
@@ -33,8 +34,9 @@ struct FeatureCellData {
         nativeName = data["nativeName"].string!
         population = data["population"].int!
         latlng = data["latlng"].arrayValue.map({$0.doubleValue})
-        translations = data["translations"].dictionaryValue.map({$1.stringValue})
+        translations = data["translations"].dictionaryValue.values.map({$0.stringValue})
         borders = data["borders"].arrayValue.map({$0.stringValue})
         languages = data["languages"].arrayValue.map({$0.dictionaryObject!})
+        currencies = data["currencies"].arrayValue.map({$0.dictionaryObject?.values})
     }
 }

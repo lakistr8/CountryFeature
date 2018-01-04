@@ -13,7 +13,6 @@ import SwiftyJSON
 class FeatureViewCell: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet var lbls : [UILabel]!
-    
     @IBOutlet weak var countryNameLabel : UILabel!
     @IBOutlet weak var townName : UILabel!
     @IBOutlet weak var regionLabel : UILabel!
@@ -28,7 +27,11 @@ class FeatureViewCell: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
     var translations: [String] = []
     var borders: [String] = []
     var languages: [Any] = []
+    var currencies: [Any] = []
     var locationManager = CLLocationManager()
+    var vindow = UIWindow(frame: UIScreen.main.bounds)
+    var nib = UINib(nibName: "TranslationView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! TranslationView
+    let closeBtn = UIButton()
     
     func changeBorder() {
         self.townView.layer.masksToBounds = true
@@ -89,6 +92,8 @@ class FeatureViewCell: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
             self.translations = item.translations
             self.borders = item.borders
             self.languages = item.languages
+            self.currencies = item.currencies
+            self.nib.initialize(data: item.translations)
         }
         
     }
@@ -102,6 +107,22 @@ class FeatureViewCell: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
         map.layer.cornerRadius = CGFloat(roundf(Float(5)))
     }
     
+    func close() {
+        nib.isHidden = true
+        closeBtn.isHidden = true
+        vindow.isHidden = true
+    }
+    
+    @IBAction func translationBtnTapp(_sender: Any) {
+        nib.frame = CGRect(x: 5, y: 100, width: 300, height: 400)
+        self.closeBtn.setTitle("X", for: .normal)
+        self.closeBtn.backgroundColor = UIColor.darkGray
+        self.closeBtn.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
+        self.closeBtn.addTarget(self, action: #selector(close), for: .touchUpInside)
+        vindow.addSubview(nib)
+        vindow.addSubview(closeBtn)
+        vindow.makeKeyAndVisible()
+    }
     
 }
 

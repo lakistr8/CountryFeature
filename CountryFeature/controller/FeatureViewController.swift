@@ -41,7 +41,10 @@ class FeatureViewController: UIViewController, iCarouselDelegate, iCarouselDataS
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         let subVIEW = UINib(nibName: "CountryView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! FeatureViewCell
-        subVIEW.frame = CGRect(x: 0, y: 50, width:self.view.frame.size.width, height: self.view.frame.size.height)
+        subVIEW.frame.origin.y = self.view.frame.origin.y + 150
+        subVIEW.frame.origin.x = 0
+        subVIEW.frame.size.width = self.view.frame.size.width
+        subVIEW.frame.size.height = self.img.frame.size.height
         subVIEW.initilaze(with: [dataSource[index]])
         return subVIEW
     }
