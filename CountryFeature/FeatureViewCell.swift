@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import SwiftyJSON
 
-class FeatureViewCell: UICollectionViewCell, CLLocationManagerDelegate, MKMapViewDelegate {
+class FeatureViewCell: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet var lbls : [UILabel]!
     

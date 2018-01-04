@@ -10,79 +10,50 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 
-
-class FeatureViewController: UIViewController {
+class FeatureViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
     
+    @IBOutlet weak var carousel: iCarousel!
+    @IBOutlet weak var img: UIImageView!
     var dataSource : [FeatureCellData] = []
-    @IBOutlet weak var collectionView: UICollectionView!
     var searchString : String?
     var searchController: UISearchController?
-    weak var featureCell : FeatureViewCell!
     let url = URL(string: "https://restcountries.eu/rest/v2/all")!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.HTTP(using: url)
-        setupSearch()
-    }
-    
-    func HTTP(using string: URL) {
-        Alamofire.request(string).responseJSON { response in
+        Alamofire.request(url).responseJSON { response in
             if let json = response.result.value {
                 let jSON = JSON(json).array
                 for item in jSON! {
                     self.dataSource.append(FeatureCellData(data: item))
                     self.searchString = item["name"].string!
                 }
-                self.collectionView.reloadData()
+                self.carousel.reloadData()
+                self.carousel.type = .cylinder
             }
         }
-        
-    }
-}
-
-
-// MARK: - Collection view data source
-
-
-extension FeatureViewController : UICollectionViewDataSource {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+//        setupSearch()
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func numberOfItems(in carousel: iCarousel) -> Int {
         return dataSource.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureViewCell", for: indexPath) as! FeatureViewCell
-        cell.initilaze(with: [dataSource[indexPath.row]])
-        return cell
+    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
+        let subVIEW = UINib(nibName: "CountryView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! FeatureViewCell
+        subVIEW.frame = CGRect(x: 0, y: 50, width:self.view.frame.size.width, height: self.view.frame.size.height)
+        subVIEW.initilaze(with: [dataSource[index]])
+        return subVIEW
+    }
+    
+    func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
+        if option == iCarouselOption.spacing {
+            return value * 1.2
+        }
+        return value
     }
 }
 
-// MARK: - GridLayout
-
-
-extension FeatureViewController : UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let layout = collectionViewLayout as! GridLayout
-        
-        let availableWidth = collectionView.bounds.size.width
-        let columns = 1
-        var itemTotalWidth = availableWidth - CGFloat(columns-1) * layout.minimumInteritemSpacing
-        itemTotalWidth -= (layout.sectionInset.left + layout.sectionInset.right)
-        
-        let itemWidth = itemTotalWidth / CGFloat(columns)
-        return CGSize(width: itemWidth, height: self.collectionView.bounds.height)
-    }
-    
-}
 
 
 // MARK: - Search bar
@@ -112,8 +83,8 @@ extension FeatureViewController : UISearchResultsUpdating {
         for (index, item) in dataSource.enumerated() {
             if item.name == enterName {
                 let scrollToItem = IndexPath(item: index, section: 0)
-                self.collectionView.scrollToItem(at: scrollToItem, at: .left, animated: true)
-                self.collectionView.reloadData()
+//                self.carousel.scrollToItem(at: scrollToItem, at: .left, animated: true)
+                self.carousel.reloadData()
             }
         }
     }

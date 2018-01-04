@@ -7,19 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38651F5B1FFE2237009E2255 /* CountryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38651F5A1FFE2237009E2255 /* CountryView.xib */; };
+		38651F5F1FFE2369009E2255 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38651F5D1FFE2369009E2255 /* iCarousel.m */; };
 		7E803FDE1EC236CE00CC5EA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E803FDD1EC236CE00CC5EA9 /* AppDelegate.swift */; };
 		7E803FE51EC236CE00CC5EA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E803FE41EC236CE00CC5EA9 /* Assets.xcassets */; };
 		7E803FE81EC236CE00CC5EA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E803FE61EC236CE00CC5EA9 /* LaunchScreen.storyboard */; };
 		7E803FF01EC2376C00CC5EA9 /* FeatureStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E803FEF1EC2376C00CC5EA9 /* FeatureStoryboard.storyboard */; };
 		7E803FF21EC24BE600CC5EA9 /* FeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E803FF11EC24BE600CC5EA9 /* FeatureViewController.swift */; };
 		7E803FF41EC24C2A00CC5EA9 /* FeatureViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E803FF31EC24C2A00CC5EA9 /* FeatureViewCell.swift */; };
-		7EAF01ED1EC66C0D00AD112E /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAF01EC1EC66C0D00AD112E /* GridLayout.swift */; };
 		8CE494DC1F8CE54B0048385F /* FeatureCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE494DB1F8CE54B0048385F /* FeatureCellData.swift */; };
 		EE2C5BFE2532B838E6FF3D20 /* Pods_CountryFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3916687C819E170BC09319BC /* Pods_CountryFeature.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E1A07BF1360B528C3521D86 /* Pods-CountryFeature.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountryFeature.release.xcconfig"; path = "Pods/Target Support Files/Pods-CountryFeature/Pods-CountryFeature.release.xcconfig"; sourceTree = "<group>"; };
+		38651F5A1FFE2237009E2255 /* CountryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryView.xib; sourceTree = "<group>"; };
+		38651F5C1FFE2367009E2255 /* CountryFeature-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CountryFeature-Bridging-Header.h"; sourceTree = "<group>"; };
+		38651F5D1FFE2369009E2255 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		38651F5E1FFE2369009E2255 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		3916687C819E170BC09319BC /* Pods_CountryFeature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountryFeature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E803FDA1EC236CE00CC5EA9 /* CountryFeature.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountryFeature.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E803FDD1EC236CE00CC5EA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +34,6 @@
 		7E803FEF1EC2376C00CC5EA9 /* FeatureStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FeatureStoryboard.storyboard; sourceTree = "<group>"; };
 		7E803FF11EC24BE600CC5EA9 /* FeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureViewController.swift; sourceTree = "<group>"; };
 		7E803FF31EC24C2A00CC5EA9 /* FeatureViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureViewCell.swift; sourceTree = "<group>"; };
-		7EAF01EC1EC66C0D00AD112E /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		82391FD0E09DA73CFAAA8374 /* Pods-CountryFeature.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountryFeature.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CountryFeature/Pods-CountryFeature.debug.xcconfig"; sourceTree = "<group>"; };
 		8CE494DB1F8CE54B0048385F /* FeatureCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCellData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,11 +84,14 @@
 				7E803FF11EC24BE600CC5EA9 /* FeatureViewController.swift */,
 				8CE494DB1F8CE54B0048385F /* FeatureCellData.swift */,
 				7E803FF31EC24C2A00CC5EA9 /* FeatureViewCell.swift */,
-				7EAF01EC1EC66C0D00AD112E /* GridLayout.swift */,
+				38651F5A1FFE2237009E2255 /* CountryView.xib */,
 				7E803FEF1EC2376C00CC5EA9 /* FeatureStoryboard.storyboard */,
 				7E803FE41EC236CE00CC5EA9 /* Assets.xcassets */,
 				7E803FE61EC236CE00CC5EA9 /* LaunchScreen.storyboard */,
 				7E803FE91EC236CE00CC5EA9 /* Info.plist */,
+				38651F5E1FFE2369009E2255 /* iCarousel.h */,
+				38651F5D1FFE2369009E2255 /* iCarousel.m */,
+				38651F5C1FFE2367009E2255 /* CountryFeature-Bridging-Header.h */,
 			);
 			path = CountryFeature;
 			sourceTree = "<group>";
@@ -133,7 +140,7 @@
 					7E803FD91EC236CE00CC5EA9 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = QC44D63L54;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -164,6 +171,7 @@
 				7E803FE81EC236CE00CC5EA9 /* LaunchScreen.storyboard in Resources */,
 				7E803FE51EC236CE00CC5EA9 /* Assets.xcassets in Resources */,
 				7E803FF01EC2376C00CC5EA9 /* FeatureStoryboard.storyboard in Resources */,
+				38651F5B1FFE2237009E2255 /* CountryView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,10 +231,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E803FDE1EC236CE00CC5EA9 /* AppDelegate.swift in Sources */,
+				38651F5F1FFE2369009E2255 /* iCarousel.m in Sources */,
 				8CE494DC1F8CE54B0048385F /* FeatureCellData.swift in Sources */,
 				7E803FF21EC24BE600CC5EA9 /* FeatureViewController.swift in Sources */,
 				7E803FF41EC24C2A00CC5EA9 /* FeatureViewCell.swift in Sources */,
-				7EAF01ED1EC66C0D00AD112E /* GridLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +371,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lakistr8.CountryFeature;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CountryFeature/CountryFeature-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -380,6 +389,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lakistr8.CountryFeature;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CountryFeature/CountryFeature-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
