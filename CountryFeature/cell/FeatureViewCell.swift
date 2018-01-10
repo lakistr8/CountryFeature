@@ -117,7 +117,9 @@ class FeatureViewCell: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
         nib.frame = CGRect(x: 5, y: 100, width: 300, height: 400)
         self.closeBtn.setTitle("X", for: .normal)
         self.closeBtn.backgroundColor = UIColor.darkGray
-        self.closeBtn.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
+        self.closeBtn.frame = CGRect(x: 120, y: 40, width: 60, height: 60)
+        self.closeBtn.layer.masksToBounds = true
+        self.closeBtn.layer.cornerRadius = CGFloat(roundf(Float(5)))
         self.closeBtn.addTarget(self, action: #selector(close), for: .touchUpInside)
         vindow.addSubview(nib)
         vindow.addSubview(closeBtn)

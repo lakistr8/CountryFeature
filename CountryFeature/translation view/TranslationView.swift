@@ -21,6 +21,11 @@ class TranslationView: UIView {
     @IBOutlet weak var lbl9 : UILabel!
     @IBOutlet weak var lbl10 : UILabel!
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = CGFloat(roundf(Float(5)))
+    }
     
     func initialize(data: [String]) {
         lbl1.text = data[0]
